@@ -6,7 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
+    body <audio id="song" autoplay loop>
+  <source src="omerilaila.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Helps autoplay work after user interaction
+  window.addEventListener('click', () => {
+    document.getElementById("song").play();
+  });
+</script> {
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #ff4d6d, #ff758f);
       height: 100vh;
