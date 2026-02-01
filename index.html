@@ -1,28 +1,41 @@
- <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-  <meta charset="UTF-8">\
-  <title>Security Alert</title>\
-\
-  <!-- Auto redirect after 2 seconds -->\
-  <meta http-equiv="refresh" content="8; url=valentine.html">\
-\
-  <style>\
-    body \{\
-      height: 100vh;\
-      display: flex;\
-      justify-content: center;\
-      align-items: center;\
-      background: black;\
-      color: red;\
-      font-family: Arial;\
-      text-align: center;\
-    \}\
-  </style>\
-</head>\
-\
-<body>\
-  <h1>\YOU ARE GETTING SCAM DRAVYA <br><br>\
-  Checking link safety...</h1>\
-</body>\
-</html>}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Alert</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: red;
+      font-family: Arial;
+      text-align: center;
+      flex-direction: column;
+    }
+    h1 { margin-bottom: 20px; }
+    #countdown { font-size: 24px; color: white; }
+  </style>
+</head>
+
+<body>
+  <h1>⚠ YOU ARE GETTING SCAM ⚠</h1>
+  <div id="countdown">Redirecting in 5...</div>
+
+  <script>
+    let timeLeft = 5;
+    const countdownEl = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdownEl.textContent = `Redirecting in ${timeLeft}...`;
+      if (timeLeft === 0) {
+        clearInterval(timer);
+        window.location.href = "valentine.html";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
